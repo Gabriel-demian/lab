@@ -42,8 +42,8 @@ function validarAlta() {
     $inicio = document.querySelector("#alta_fecha"),
     $ingresos = document.querySelector("#alta_ingresos");
 
-    const $inicio2 = $inicio.value.split("-").join("-");
-      console.log($inicio2);
+  const $inicio2 = $inicio.value.split("-").join("-");
+  console.log($inicio2);
 
   if ($proyecto.value == "" || $referente.value == "" || $pais.value == "" || $inicio.value == "" || $ingresos.value == "") {
     return false;
@@ -56,6 +56,9 @@ function validarAlta() {
 
 function EnviarNuevoProy() {
 
+
+
+  // return false
   var confirmaAlta = confirm("Esta seguro que deseea añadir el neuvo proyecto ?");
 
   if (confirmaAlta) {
@@ -65,29 +68,32 @@ function EnviarNuevoProy() {
       $inicio = document.querySelector("#alta_fecha"),
       $ingresos = document.querySelector("#alta_ingresos");
 
-      const $inicio2 = $inicio.value.split("-").join("-");
-      console.log($inicio2);
+    const $inicio2 = $inicio.value.split("-").join("-");
+    console.log($inicio2);
 
-      var request = $.ajax({
-        type: "POST",
-        url: "./alta.php",
-        processData: false,
-        contentType: false,
-        cache: false,
-        data: {
-          proyecto: $proyecto.value,
-          referente: $referente.value,
-          pais: $pais.value,
-          inicio: $inicio2,
-          ingresos: $ingresos.value
-        },
-      success: function (respuestaDelServer, estado) {
-        var objetoDato = JSON.parse(respuestaDelServer);
-        console.log(respuestaDelServer);
-        alert("NUEVO PROYECTO DADO DE ALTA!");
+    var request = $.ajax({
+      type: "POST",
+      url: "./alta.php",
+      // processData: false,
+      // contentType: false,
+      // cache: false,
+      data: {
+        proyecto: $proyecto.value,
+        referente: $referente.value,
+        pais: $pais.value,
+        inicio: $inicio2,
+        ingresos: $ingresos.value
       },
-      error: function (respuestaDelServer, estado){
-        alert("ERROR");
+      success: function (respuestaDelServer, estado) {
+        console.log(respuestaDelServer, estado);
+        alert(respuestaDelServer);
+        // var objetoDato = JSON.parse(respuestaDelServer);
+        // console.log(respuestaDelServer);
+        // alert("NUEVO PROYECTO DADO DE ALTA!");
+      },
+      error: function (respuestaDelServer, estado) {
+        console.log(respuestaDelServer, estado);
+        // alert("ERROR");
       }//cierra funcion asignada al success
     });//cierra ajax
   }

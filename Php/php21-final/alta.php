@@ -1,7 +1,5 @@
 <?php 
-    print_r($_POST, TRUE);
-    dd($_POST);
-
+    echo json_encode($_POST);
     $dbname="bv1npn2veaacv2l7ghih"; 
     $host="bv1npn2veaacv2l7ghih-mysql.services.clever-cloud.com"; 
     $host2="mysql.services.clever-cloud.com";
@@ -40,7 +38,7 @@
     $inicio = "2022-10-20";
     $ingresos =  "12231";
     */
-    $respuesta_estado = "$proyecto ." ". $referente ." ". $pais ." ". $inicio ." ". $ingresos";
+    $respuesta_estado = $proyecto ." ". $referente ." ". $pais ." ". $inicio ." ". $ingresos;
     $query = "INSERT INTO proyectos (proyecto,referente,pais,inicio,ingresos) VALUES ('$proyecto','$referente','$pais','$inicio',$ingresos);";
     
    
