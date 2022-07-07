@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h2>Articulos</h2>
+        <div>
+          <button id="cargar">Cargar Datos</button>
+          <button id="vaciar">Vaciar Datos</button>
+          <button id="abrir">Abre DIV MODAL</button>
+        </div>
+    </header>
+    <main>
+        <table class="table">
+          <thead>
+            <th class="legajo" >codArt</th>
+            <th class="nombre" >familia</th>
+            <th class="apellido">descripcion</th>
+            <th class="sueldo">um</th>
+          </thead>
+          <tbody id="cuerpoTabla"></tbody>
+        </table>
+        <div class="modal none" id="modal">
+          <button class="cerrar" id="cerrar">X</button>
+          <form action="respuesta.html" method="get" class="form">
+            <p class="form-input">
+              <label for="cod">codArt</label>
+              <input type="text" name="cod" id="cod" required />
+            </p>
+            <p class="form-desc">
+              <label for="desc">Descripcion</label>
+              <input type="text" name="desc" id="desc" required />
+            </p>
+            <p class="form-input">
+              <label for="unidades">Medida del articulo</label>
+              <select name="unidades" id="unidades" required></select>
+            </p>
+            <p class="form-input">
+              <label for="dia">Fecha Alta</label>
+              <input type="date" name="dia" id="dia" required />
+            </p>
+            <p class="form-input">
+              <label for="stock">Saldo del stock</label>
+              <input type="text" name="stock" id="stock" required />
+            </p>
+            <p class="form-button">
+              <input type="submit" value="ENVIAR" />
+            </p>
+          </form>
+        </div>
+    </main>
+    <footer>
+        <h2>Pie</h2>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+</html>

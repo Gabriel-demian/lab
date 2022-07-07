@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+
+  <body>
+    <div>
+      
+      <h1>Texto1 escrito directamente en HTML.</h1>
+
+      <script>
+        alert(
+          "Este mensaje de alerta es escrito desde un script del documento. Esta ventana de alerta es modal, lo que significa que el flujo de escritura del documento se interrumpe hasta el evento de aceptación. El navegador muestra este tipo de ventana con anterioridad a la interpretación o renderización del documento."
+        );
+        document.write("<h1>Text 2. Mensaje escrito desde javaScript</h1>");
+      </script>
+
+        <h1>
+          No pisa al documento porque aún no terminó el flujo de escritura del
+          navegador
+        </h1>
+      
+        <h1>Texto 3 escrito en HTML</h1>
+      
+        <script>
+          alert(
+            "Este mensaje de alerta es escrito desde un script del documento. Esta ventana de alerta es modal, lo que significa que el flujo de escritura del documento se interrumpe hasta el evento de aceptación. El navegador muestra este tipo de ventana con anterioridad a la interpretación o renderización del documento."
+          );
+          document.write("<h1>Text 4. Mensaje escrito desde javaScript</h1>");
+        </script>
+      
+        <h1>
+          No pisa al documento porque aún no terminó el flujo de escritura del
+          navegador
+        </h1>
+        
+    </div>
+  </body>
+
+
+</html>

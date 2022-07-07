@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./estilo.css">
+</head>
+
+<body>
+    <h1>Introducir un valor en el cuadro de texto y luego pulsar el botón para ejecutar el procedimiento correspondiente</h1>
+
+    <input type="text" id="valor">
+    <button id="mostrar">Muestra valor</button>
+    <button id="suma">Sumar 1</button>
+    <button id="cuadrado">X^2</button>
+    <button id="multiplica">Multiplica * 2</button>
+    <button id="2elevado">2^X</button>
+
+
+    <script type="text/javascript">
+            document.getElementById("mostrar").onclick=function(){
+				if(document.getElementById("valor").value==""){
+					alert("No se ha ingresado ningún valor");
+				}
+				else{
+					alert("El valor ingresado es "+document.getElementById("valor").value);
+				}
+			}
+			document.getElementById("suma").onclick=function(){
+				document.getElementById("valor").value=parseInt(document.getElementById("valor").value)+1;
+			}
+			document.getElementById("cuadrado").onclick=function(){
+				document.getElementById("valor").value=parseInt(document.getElementById("valor").value)**2;
+			}
+			document.getElementById("multiplica").onclick=function(){
+				document.getElementById("valor").value=parseInt(document.getElementById("valor").value)*2;
+			}
+			document.getElementById("2elevado").onclick=function(){
+				document.getElementById("valor").value=2**parseInt(document.getElementById("valor").value);
+			}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <header>
+            <h2>Formulario para Alta - Maestro de Articulos</h2>
+        </header>
+        <main>
+            <form action="respuesta.html" method="get" class="form">
+                <p class="form-nombre">
+                    <label for="desc">Descripcion</label>
+                    <input type="text" name="desc" id="desc" required>
+                </p>
+                <p class="form-input">
+                    <label for="cod">codArt</label>
+                    <input type="text" name="cod" id="cod"required>
+                </p>
+                <p class="form-input">
+                    <label for="unidades">Medida del articulo </label>
+                    <select name="unidades" id="unidades" required></select>
+                </p>
+                <p class="form-input">
+                    <label for="dia">Fecha Alta</label>
+                    <input type="date" name="dia" id="dia" required>
+                </p>
+                <p class="form-input">
+                    <label for="stock">Saldo del Stock</label>
+                    <input type="text" name="stock" id="stock" required>
+                </p>
+                <p class="form-button">
+                    <input type="submit" value="ENVIAR">
+                </p>
+                
+            </form>
+        </main>
+        <footer>
+            <h2>Pie del formulario</h2>
+        </footer>
+    </body>
+
+
+
+</html>

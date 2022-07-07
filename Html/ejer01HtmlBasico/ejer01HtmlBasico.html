@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    </head>
+    <body>
+        <h1>Primer parrafo corto (incluye el retorno del carro)</h1>
+        <h2>Segundo Parrafo corto (incluye el retorno del carro)</h2>
+        <h2>Grupo de elementos de navegación</h2>
+        <nav>
+            <ul>
+                <li><a href="https://www.yahoo.com/" target="_blank">Yahoo</a></li>
+                <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+            </ul>
+        </nav>
+        <br>
+        <hr/>
+
+        <a href="./preguntas01.html" >Preguntas</a>
+        <a href="./ejer01OtraPaginaEnMismaVentana.html" >Enlace a otra pagina dentro de la misma pestaña</a>
+        <a href="./ejer01OtraPaginaEnNuevaVentana.html" target="_blank">Enlace a otra pagina en nueva pestaña</a>
+        <a href="#ancla" >Ancla a otro punto de esta página</a>
+        <br>
+
+        <hr/>
+        <main>
+            <h1>Cuerpo principal del contenido</h1>
+            La etiqueta main es en HTML5 una etiqueta semantica. Esto quiere decir que tiene que ver con el significado de lo contendio dentro de ella. Define el contenido principal de la página. Unicamente puede haber una sola etiqueta como esta en todo el documento.
+            <br>El contendio escrito aquí dentro no se repite en el resto del sitio (todo lo contrario a los encabezados de página, los menues de navegación y los pies de página). Es usado por buscadores para indexar.
+            <br>Conviene usar aqui textos que ayuden a encontrar la página luego de procesos de indexación de los buscadores.
+
+            <h2>Sección etiquetas semánticas estructurales más importantes</h2>
+            <ul>
+                <li>HEADER</li>
+                <li>FOOTER</li>
+                <li>SECTION</li>
+                <li>ARTICLE</li>
+                <li>NAV</li>
+                <li>ADDRESS</li>
+            </ul>
+
+            Las etiquetas semánticas estructurales estan relacionadas directamente con el significado del contenido y no con los estilos ni las posiciones dentro del documento.
+
+            <h2>Reglas para etiquetas semánticas</h2>
+            <ul>
+                <li>Los distintos tipos de contenido se pueden asociar a las etiquetas SECTION</li>
+                <li>Las unidades de contenido se asocian a las etiquetas ARTICLE. O sea que un SECTION anida multiples ARTICLES</li>
+                <li>Las etiquetas HEADER Y FOOTER pueden ser anidadas dentro de otras HEADER o FOOTER. Osea un FOOTER podría anidar otro HEADER y FOOTER.</li>
+                <li>La etiqueta NAV debe ser unica en el documento y corresponde a los elementos de navegación del documento.</li>
+                <li>Reservar etiqueta h1 para usar dentro de las etiquetas top level como MAIN, HEADER o FOOTER</li>
+            </ul>
+            <br/>
+
+            <h3>Section de imagenes</h3>
+            
+            En esta sección mostraremos imagenes identicas de nuestro sitio.
+            <br/>
+            La siguiente imagen es  ta insertada en tamaño natural.
+            <br/>
+
+            <img alt="foto del Coliseo"   src="../../resources/coliseo.jpg">
+            <br/>
+            La misma imagen del Coliseo Romano (200px x 200px) con distintos atributos width:
+            <br/>De acuerdo a la dimension de la imagen, solo la primera no pixelara.
+            <br/>Cada elemento img se ubica al lado de la anterior hasta completar el ancho de la ventana activa (view port)
+            <br/>Todas las siguientes ima   genes se verán deformadas por haber definido doble parametro de estilo (ancho y alto)
+            <br/>
+            <img alt="foto del Coliseo" style="width:350px;height:200px"  src="../../resources/coliseo.jpg">    
+            <img alt="foto del Coliseo" style="width:100px;height:200px"  src="../../resources/coliseo.jpg">
+            <img alt="foto del Coliseo" style="width:150px;height:200px"  src="../../resources/coliseo.jpg">
+            <img alt="foto del Coliseo" style="width:500px;height:200px"  src="../../resources/coliseo.jpg">
+            <img alt="foto del Coliseo" style="width:50px;height:200px"  src="../../resources/coliseo.jpg">
+            <img alt="foto del Coliseo" style="width:300px;height:200px"  src="../../resources/coliseo.jpg">
+            <br/><br/><br/><br/><br/>
+            <hr/>
+            <br/>
+            <h3>Section del video</h3>
+            <video width="520" height="440" controls>
+                <source src="../../resources/roma.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <br/>
+            <h3 id="ancla">Anclajes</h3>
+
+            Punto de anclado
+
+            <br/>
+
+        </main>
+    </body>
+    <footer>
+        <hr/>
+        <h1>Datos del alumno</h1>
+        Gabriel Leoni
+        <br/>
+        <a>gabriel.leoni.um@gmail.com</a>
+        <br/>
+        <br/>
+        <hr/>
+    </footer>
+</html>

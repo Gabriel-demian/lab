@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <style>
+            li {font-weight: bold;}
+        </style>
+    </head>
+    <body ">
+        <h1>Formulario para entradas sin validación</h1>
+        <form action="./respuestaFormulario.html" target="_black" method="get">
+            <ul>
+                <li>Apellido:</li><br/>
+                <label><input type="text" name="apellido" autofocus="autofocus"></label>
+            </ul>
+            <ul>
+                <li>Contraseña:</li><br/>
+                <label><input type="password" name="contraseña" ></label>
+            </ul>
+            <ul>
+                <li>Oculto:</li>
+                <label><input type="hidden" name="oculto" ></label>
+            </ul>
+            <ul>
+                <li>Campo desahilitado</li><br/>
+                <label><input name="desahilitado" disabled></label>
+            </ul>
+            <ul>
+                <li>Campo de solo lectura</li><br/>
+                <label><input name="soloLectura" readonly></label>
+            </ul>
+            <ul>
+                <li>Practica deportes</li><br/>
+                <label><input type="checkbox" name="deporte"></label>
+            </ul>
+            <ul>
+                <li>Practica música</li><br/>
+                <label><input type="checkbox" name="musica"></label>
+            </ul>
+            <ul>
+                <li>Practica de pintura artistica</li><br/>
+                <label><input type="checkbox" name="pintura"></label>
+            </ul>
+            <ul>
+                <li>Sexo</li><br/>
+                <label>Masculino <input type="radio" name="sexo" value="m"> / Femenino </label><label><input type="radio" name="sexo" value="f"></label>
+            </ul>
+            <ul>
+                <li>Estudios cursados:</li><br/>
+                <label>
+                    <select name="estudios">
+                        <option value="prim">Primarios</option>
+                        <option value="secu">Secundarios</option>
+                        <option value="ter">Terciarios</option>
+                        <option value="uni">Universitarios</option>
+                        <option value="post">Postgrado</option>
+                    </select>
+                </label>
+            </ul>
+            <ul>
+                <li>Fecha y Hora:</li><br/>
+                <label><input type="date" name="fecha"><input type="time" name="hora"></label>
+            </ul>
+            <ul>
+                <li>Color:</li><br/>
+                <label><input type="color" name="color"></label>
+            </ul>
+            <ul>
+                <li><button type="submit">Enviar Formulario sin validación</button></li>
+            </ul>
+            <ul>
+                <li><button type="reset" >Reset a valores predeterminados</button></li>
+            </ul>
+        </form>
+        <h1>Formulario para entradas con validación</h1>
+        <form action="./respuestaFormulario.html" target="_black" method="get">
+            <ul>
+                <li>Comentario (validación por requerido):</li><br/>
+                <label><input type="text" name="comentario" required></label>
+            </ul>
+            <ul>
+                <li>Email (x@x y required):</li><br/>
+                <label><input type="email" name="email" required placeholder="texto@texto"></label>
+            </ul>
+            <ul>
+                <li>Número entero limitado (valicación por tipo numerico y cotas):</li><br/>
+                <label><input type="number" min="1" max="5" name="entero" required></label>
+            </ul>
+            <ul>
+                <li>Numero decimal:</li><br/>
+                <label><input type="number" name="decimal" min="0" max="9" value="0" step=".01" required></label>
+            </ul>
+            <ul>
+                <li>URL(validación por required, escribir http://):</li><br/>
+                <label><input type="url" name="url" required placeholder="https://xxx" pattern="https://.*"></label>
+            </ul>
+            <ul>
+                <li>Pattern de validación:</li><br/>
+                <label><input type="text" name="validación" pattern="[a-z]{3}[1-2]{2}" required title="3 letras y 2 numeros que sean 1 o 2 solamente"></label>
+            </ul>
+            <ul>
+                <li>Pattern de validación:</li><br/>
+                <label><input type="text" name="celular" pattern="[(]\+[0-9]{2}[)]\s[0-9]{2}\s[0-9]{8}" placeholder="(+54) 11 44445555" required></label>
+            </ul>
+            <ul>
+                <li><button type="submit">Enviar Formulario con validación</button></li>
+            </ul>
+            <ul>
+                <li><button type="reset" >Reset a valores predeterminados</button></li>
+            </ul>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+div.fondo{
+    
+    width: 50%;
+    padding: 4%;
+    margin: auto;
+    border-style: solid;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: green;
+    background-color: lightblue;
+}
+
+p {
+    font-size: 18px;
+}
+
+div.caja{
+    width: 60%;
+    padding: 3%;
+    height: 300px;
+    
+    border-top-left-radius: 25px;
+    border-style: solid;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: red;
+
+    box-sizing: border-box;
+    overflow: scroll;
+    
+    background-image: url('./frutas.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+
+/*Se deja background-size: cover;  ya que al usar contain y cambiamos el formato de la ventana se pierde el fondo.*/

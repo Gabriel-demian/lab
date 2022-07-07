@@ -1,0 +1,19 @@
+*{
+	font-family: sans-serif;
+}
+span{
+	color: red;
+}
+table{
+	border: solid;
+	border-width: thin;
+	background-color: gray;
+	border-collapse: collapse;
+}
+td{
+	border: solid;
+	border-width: thin;
+	text-align: center;
+	background-color: gray;
+	width: 150px;
+}

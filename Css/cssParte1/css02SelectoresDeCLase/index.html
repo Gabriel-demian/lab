@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <TITLE>css02SelectoresDeClase.html</TITLE>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <style>
+            h2 {
+                font-size: 30px;
+            }
+            span {
+                background-color: yellow;
+                font-weight: bold;
+                color: black;
+            }
+            p.claseAcotacion{
+                text-align: left;
+                font-size: 15px;
+                color: blue;
+                font-style: italic;
+                border-style: solid;
+                border-width: thin;
+                border-color: blue;
+                width: fit-content;
+            }
+            p.claseAyuda{
+                text-align: left;
+                font-size: 18px;
+                color: orange;
+                font-style: italic;
+                border-style: solid;
+                border-width: thin;
+                border-color: yellow;
+                width: fit-content;
+            }
+            img.imagenAl50 {
+                width: 50%;
+            }
+            p.claseContenidoComun{
+                font-style: normal;
+                font-size: 18px;
+            }
+            p#idUnico{
+                text-align:center;
+                font-weight: bold;
+                width: 300px;
+                color: red;
+                font-style: italic;
+                border-style: solid;
+                border-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>A partir de esta página no usaremos más el atributo style en ninguna etiqueta.</h2>
+        <h2>Todo el estilo será definido dentro de una etiqueta style como "clase" anidada en la etiqueta head del documento.</h2>
+        <h2>Todos los párrafos tienen un default como estilo que incluyen un margin-buttom para separarlos más entre ellos.</h2>
+
+        <p>Este párrafo contiene un grupo de palabras delimitado por una etiqueta "span". El comienzo es aquí: <span>grupoo de palabras destacadas con el estilo ClaseResaltado</span>blablabla blablabla blablabla</p>
+
+        <p class="claseAcotacion">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAcotación" sdfjbnsdkjgbdsfkjg dsfg dsfhg sdfhskdgnds gdfsiughsdfopuignsdfkjghdsfiugnhsdofugndo</p>
+
+        <p><span>Este párrafo toma el stilo definido en la etiqueta style en el header del documento como class="claseResaltado"</span></p>
+
+        <p class="claseAyuda">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAyuda"</p>
+
+        <p class="claseContenidoComun">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseContenidoComun"</p>
+
+        <p id="idUnico">Párrafo formateado por un estilo particular definido en el style del documento para un párrafo especifico id="idUnico". No se trata de un selector de clase sino de un selector de elemento "#"</p>
+        
+        <h2>Todas las imagenes con class="imagenAl50" en esta página se encuentran limitadas al 50% del ancho del contenedor más allá de su tamaño real en pixeles</h2>
+
+        <img alt="foto de una casa" src="./casa.jpg" class="imagenAl50">
+    </body>
+</html>

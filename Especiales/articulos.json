@@ -1,0 +1,100 @@
+{
+    "articulos": [
+        {
+            "codArt": "ALM00",
+            "familia": "FRSEC",
+            "descripcion": "Alemendras Peladas",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "233"
+        },
+        {
+            "codArt": "CBD33",
+            "familia": "GBSEC",
+            "descripcion": "Crema de mani",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "153"
+        },
+        {
+            "codArt": "TGB45",
+            "familia": "WDDCA",
+            "descripcion": "Pimienta en grano",
+            "um": "KG",
+            "fechaAlta": "2020-03-12",
+            "saldoStock": "985"
+        },
+        {
+            "codArt": "ALM00",
+            "familia": "FRSEC",
+            "descripcion": "Alemendras Peladas",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "233"
+        },
+        {
+            "codArt": "CBD33",
+            "familia": "GBSEC",
+            "descripcion": "Crema de mani",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "153"
+        },
+        {
+            "codArt": "TGB45",
+            "familia": "WDDCA",
+            "descripcion": "Pimienta en grano",
+            "um": "KG",
+            "fechaAlta": "2020-03-12",
+            "saldoStock": "985"
+        },
+        {
+            "codArt": "ALM00",
+            "familia": "FRSEC",
+            "descripcion": "Alemendras Peladas",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "233"
+        },
+        {
+            "codArt": "CBD33",
+            "familia": "GBSEC",
+            "descripcion": "Crema de mani",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "153"
+        },
+        {
+            "codArt": "TGB45",
+            "familia": "WDDCA",
+            "descripcion": "Pimienta en grano",
+            "um": "KG",
+            "fechaAlta": "2020-03-12",
+            "saldoStock": "985"
+        },
+        {
+            "codArt": "ALM00",
+            "familia": "FRSEC",
+            "descripcion": "Alemendras Peladas",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "233"
+        },
+        {
+            "codArt": "CBD33",
+            "familia": "GBSEC",
+            "descripcion": "Crema de mani",
+            "um": "KG",
+            "fechaAlta": "2020-06-15",
+            "saldoStock": "153"
+        },
+        {
+            "codArt": "TGB45",
+            "familia": "WDDCA",
+            "descripcion": "Pimienta en grano",
+            "um": "KG",
+            "fechaAlta": "2020-03-12",
+            "saldoStock": "985"
+        }
+    ]
+}

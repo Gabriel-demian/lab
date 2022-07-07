@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+div.contenedor{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: #CACFD2;
+	width: 50%;
+	height: 50%;
+	top: 5%;
+	left: 25%;
+	padding: 1%;
+}
+div.numeros{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background-color: aqua;
+	width: 80%;
+	height: 55%;
+	padding: 1%;
+}
+div.operaciones{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background-color: aqua;
+	width: 80%;
+	height: 35%;
+}
+button.numero{
+	background-color: lightblue;
+	color: white;
+	width: 30%;
+	margin: 1%;
+}
+button.operador{
+	background-color: lightblue;
+	color: black;
+	width: 35%;
+	height: 30%;
+	margin: 1%;
+}
+input{
+	text-align: right;
+	width: 80%;
+	height: 10%;
+}

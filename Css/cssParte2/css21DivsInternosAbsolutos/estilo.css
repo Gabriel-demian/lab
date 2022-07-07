@@ -1,0 +1,52 @@
+.divChico{
+    float:left; 
+    width: 150px;
+    height: 100px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+html, body {
+    height:100%;
+    margin: 0%;
+}
+
+.mayor{
+    background-color: aqua;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    clear: both;
+}
+    
+.contenedor1{
+    position: absolute;
+    background-color: blue;
+    margin-left: 0%;
+    margin-top: 150px;
+    width: 20%;
+    height: max-content;
+    overflow:auto;
+}
+
+.contenedor2{
+    position: absolute;
+    background-color: grey;
+    margin-left: 40%;
+    margin-top: 15%;
+    width: 20%;
+    height: 40%;
+    overflow:auto;
+}
+.contenedor3{
+    position: absolute;
+    background-color: green;
+    margin-left: 45%;
+    margin-top: 20%;
+    width: 35%;
+    height: max-content;
+}

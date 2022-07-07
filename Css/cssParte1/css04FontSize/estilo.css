@@ -1,0 +1,49 @@
+* {
+    font-size: 12px;
+}  
+
+@media screen and (min-width : 1080px){
+    h1 {
+        text-align:center;
+        width: 100%; 
+        background-color: lightgray;
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1em;
+        font-weight: bold;
+        background-color: lightgray;
+    }
+}
+
+@media screen and (min-width : 800px) and (max-width : 1080px){
+    h1 {
+        text-align:center;
+        width: 100%; 
+        background-color: lightgray;
+        font-size: 4em;
+    }
+    
+    p {
+        font-size: 2em;
+        font-weight: bold;
+        background-color: lightgray;
+    }
+}
+
+@media screen and (max-width : 800px){
+    h1 {
+        text-align:center;
+        width: 100%; 
+        background-color: lightgray;
+        font-size: 6em;
+    }
+    
+    p {
+        font-size: 3em;
+        font-weight: bold;
+        background-color: lightgray;
+    }
+}
+

@@ -1,0 +1,34 @@
+
+html, body {
+    height:100%;
+    width: 100%;
+    margin:0px;
+    padding: 0;
+}
+
+.contenedor {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+
+    Flex-wrap:wrap;
+
+    height: 100%;
+    width: 80%;
+    
+    background-color: yellow;
+}
+
+img{
+    width: 450px;
+    height: 250px;
+}
+
+.divInterno{
+    margin-left: 0%;
+    width: 450px;
+    height: 250px;
+}

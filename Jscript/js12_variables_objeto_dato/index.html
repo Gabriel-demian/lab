@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="./estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Consignas del ejercicio</h1>
+        <h2>Declarar y hacer uso de Objetos de datos (datos tipo objeto</h2>
+        <h2>Cargar de 2 personas a un array por programa</h2>
+        <h2>Dejar de usar la funcion prompt para el ingreso de datos. Armar un contenedor para el ingreso de datos desde consola(solo inputs sin formulario</h2>
+        <h2>Dejar de usar document.write y escribir contenido dentro de un elemento html(puede ser un div)</h2>
+        <h2>Dos botones para llamar a dos funciones. Una para cargar un nuevo objeto de dato por teclado y otra para mostrar en formato de tabla el array completo de elementos con su longitud</h2>
+        <h2>Un tercer procedimiento para ocultar el elemento de presentacion (usando el parametro de estilo display:none)</h2>
+    </header>
+    <main id="main">
+        <div class="formulario">
+            <h2>Adicionar Persona</h2>
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+            <div>
+                <label for="nacimiento">Fecha de Nacimiento</label>
+                <input type="date" name="nacimiento" id="nacimiento">
+            </div>
+            <button id="crear">Crear Persona</button>
+        </div>
+        <div class="controles">
+            <h2>Controles</h2>
+            <div>
+                <button id="lista">Lista Personas</button>
+                <button id="ocultar">Ocultar Presentacion</button>
+            </div>
+        </div>
+        <div id="presentacion" class="presentacion">
+
+        </div>
+    </main>
+</body>
+
+<script>
+    let persona = {nombre:"Juan jr",apellido:"Smith", nacimiento:"12-12-1999"},
+    personas = [persona];
+    personas.push({nombre:"Juan", apellido:"Romero", nacimiento:"25-12-1993"});
+
+    const presentacion = document.getElementById("presentacion");
+
+    document.getElementById("crear").addEventListener("click", ()=> {
+        let nuevaPersona = {
+            nombre: document.getElementById("nombre").value,
+            apellido: document.getElementById("apellido").value,
+            nacimiento: document.getElementById("nacimiento").value
+        }
+        personas.push(nuevaPersona);
+
+        lista();
+    });
+
+    const lista = ()=> {
+        let texto = "<h2>Presentacion</h2>";
+        texto = texto + "<table style='border-collapse: collapse'>";
+        personas.forEach(element => {
+            texto = texto + "<tr>";
+            texto = texto + "<td style='width: 70px; height: 30px; padding: 1px'>" + element.nombre + "</td>";
+            texto = texto + "<td style='width: 70px; height: 30px;'>" + element.apellido + "</td>";
+            texto = texto + "<td style='width: 70px; height: 30px;'>" + element.nacimiento + "</td>";
+            texto = texto + "</div>";
+        });
+        texto = texto + "</table>";
+        texto = texto + "<h4>Longitud del arreglo de objetos: " + personas.length + "</h4>"
+        presentacion.innerHTML = texto;
+        presentacion.style = "display: block";
+    }
+
+    document.getElementById("ocultar").addEventListener("click", ()=> {
+        presentacion.style = "display: none";
+    });
+
+    document.getElementById("lista").addEventListener("click", ()=> {
+        presentacion.style = "display: block";
+        lista();
+    });
+</script>
+
+</html>

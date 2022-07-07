@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <TITLE>css04FontSize</TITLE>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="./estilo.css">
+    </head>
+    <body>
+        <h1>Tamaño de los fonts</h1>
+
+        <p>Los textos marcados con "H1" tendrán dimención doble a los párrafos comunes. Correspónderían títulos</p>
+
+        <p>El ejercicio se definirá un tañamo de letra default para el body y luego todo será expresado en unidades em (unidad de referencia)</p>
+        
+        <p>Este ejercicio se trabajará con control de medio @media() para que el tamaño de letra sea modificado según el tamaño del viewport</p>
+    
+        <p>Dispositivos moviles de alta resolución tienen una definición mayor a 300ppi (Pixels/Pulgada)</p>
+
+        <p>Dispositivos moviles de baja resolución tienen una definición menor en el orden de los 100ppi (Pixels/Pulgada)</p>
+
+        <p>Dispositivos de pantalla grande tienen una definición en el orden de los 60 (Pixels/Pulgada)</p>
+
+        <p>En un movil de alta resolución estaría viendo las letras de 3 a 5 veces más chicas que en una pantalla grande si su tamaño es fijo en pixeles</p>
+
+        <p>Por este motivo es que si no uso el control de medio, será más conveniente definir el tamaño de letra considerando el peor de los casos (Dispositivos de alta resolución)</p>
+
+        <p>En este ejercicio hago crecer la letra conforme el Dispositivo es más pequeño, siempre suponiendo que estos tienen mayor resolución</p>
+
+        <p>12px (1em) para Dispositivos mayores a 1080 px. No olvidar definir el tamaño default en 12px</p>
+
+        <p>24px (2em) para Dispositivos mayores a entre 800px y 1080px</p>
+
+        <p>36px (3em) para Dispositivos menores a 800 px</p>
+    
+    </body>
+</html>

@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}
+
+div#fondo{
+    background: turquoise;
+    display: flex;
+    width: 80%;
+    height: 70%;
+}
+
+p.op2{
+    padding-top: 8px;
+    font-size: 10px;
+}
+
+div{
+    display:inline-block;
+    margin: auto;
+    height: 50px;
+    width: 150px;
+    padding: 3%;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+
+    text-align:center;
+}
+
+div.div1{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    background: linear-gradient(orange,white,pink);
+}
+
+div.div2{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    background: radial-gradient(orange,white,pink);
+}
+
+div.div3{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, orange,white,pink);
+}
+
+div.div4{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, orange,white,pink);
+}
+
+div.div5{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, orange,white,pink);
+}
+
+
+
+
+
+
+
+

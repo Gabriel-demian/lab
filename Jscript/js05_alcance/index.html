@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+
+
+</head>
+
+<body>
+
+    <button id="incorrecta">
+        Inicialización incorrecta
+    </button>
+
+    <button id="correcta">
+        Inicialización correcta
+    </button>
+
+    <button id="mostrar">
+        Muestra variable global
+    </button>
+
+    <script type="text/javascript">
+        var global;
+
+        document.getElementById("incorrecta").onclick = function () {
+            var local;
+            local = (prompt("Ingresar valor"));
+            if (local == null) {
+                alert("La variable global no ha sido asignada");
+            }
+            else {
+                alert("El valor de la variable local ingresada es: " + local);
+                alert("El tipo de variable local ingresada es: " + typeof (local));
+            }
+        };
+
+        document.getElementById("correcta").onclick = function () {
+            global = (prompt("Ingresar valor"));
+            if (global == null) {
+                alert("La variable global no ha sido asignada");
+            }
+            else {
+                alert("El valor de la variable global ingresada es: " + global);
+                alert("El tipo de variable global ingresada es: " + typeof (global));
+            }
+        }
+
+        document.getElementById("mostrar").onclick = function () {
+            if (typeof (global) == 'undefined') {
+                alert("La variable global no ha sido asignada")
+            } else {
+                alert("El valor de la variable global ingresada es: " + global);
+                alert("El tipo de variable global ingresada es: " + typeof (global));
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

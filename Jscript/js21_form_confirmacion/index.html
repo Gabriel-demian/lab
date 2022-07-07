@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <main>
+        <h1>Confirmacion de envio y de reset</h1>
+        <form id="form" class="formulario">
+            <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+            <div>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+            <input type="button" value="Reset" id="reset" class="button">
+            <input type="button" value="Enviar" id="enviar" class="button">
+        </form>
+    </main>
+</body>
+
+<script>
+    const form = document.getElementById("form")
+    document.getElementById("enviar").addEventListener("click", ()=>{
+        let confirma = confirm("Esta seguro de enviar");
+        if(confirma) {
+            form.method = "get";
+            form.action = "./respuestaForm.html";
+            form.submit();
+        }
+    }) 
+    
+    document.getElementById("reset").addEventListener("click", ()=> {
+        let confirma = confirm("Esta seguro de resetear el formulario");
+        if(confirma) {
+            form.reset();
+        }
+    });
+</script>
+
+</html>

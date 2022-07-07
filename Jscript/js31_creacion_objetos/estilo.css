@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-X: hidden;
+    background-color: beige;
+}
+
+
+main > h1 {
+    margin: 1rem;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+main {
+    background-color: beige;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+button {
+    float: left;
+    margin: 2rem 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: grey;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s all;
+    cursor: pointer;
+    color: black;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.contenedor {
+    background-color: green;
+    width: 50%;
+    height: 500px;
+    overflow-y: auto;
+    border-radius: 16px;
+}
+
+.contenedor div{
+    background-color: green;
+    width: 50%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 16px;
+    text-align: center;
+}

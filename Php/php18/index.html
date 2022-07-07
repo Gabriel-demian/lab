@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2>Tabla de proyectos</h2>
+        <div class="header-inputs">
+            <p>Ordenar por:</p>
+            <input type="text" id="f_orden" value="registro">
+            <button id="cargar">Cargar Tabla</button>
+            <button id="limpiar">Limpiar Datos</button>
+        </div>
+    </header>
+    <main class="main">
+        <article>
+            <table class="main-table">
+                <thead class="main-table-head">
+                    <tr>
+                        <th class="registro" id="registro">Nº de Registro</th>
+                        <th class="proyecto" id="proyecto">Proyecto</th>
+                        <th class="referente" id="referente">Referente del proyecto</th>
+                        <th class="pais" id="pais">Pais de Origen</th>
+                        <th class="inicio" id="inicio">Fecha de inicio</th>
+                        <th class="ingresos" id="ingresos">Ingresos</th>
+                    </tr>
+                    <tr class="filter">
+                        <td><input type="text" id="f_registro" placeholder="filtro por registro"></td>
+                        <td><input type="text" id="f_proyecto" placeholder="filtro por proyecto"></td>
+                        <td><input type="text" id="f_referente" placeholder="filtro por referente"></td>
+                        <td><input type="text" id="f_pais" placeholder="filtro por pais"></td>
+                        <td><input type="text" id="f_inicio" placeholder="filtro fechas de inicio"></td>
+                        <td><input type="text" id="f_ingresos" placeholder="filtro ingresos"></td>
+                    </tr>
+                </thead>
+                <tbody id="tabla" class="main-table-body"></tbody>
+            </table>
+        </article>
+    </main>
+    <footer class="footer">
+        <h3 id="numRegistro">Numero de registros: </h3>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

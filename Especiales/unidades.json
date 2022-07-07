@@ -1,0 +1,6 @@
+{
+    "unidadesDeMedida": [
+        {"option": "001", "descripcionUm": "Kilogramos"},
+        {"option": "002", "descripcionUm": "Bolsa 0.5 litros"},
+        {"option": "003", "descripcionUm": "Lata"}
+    ]}

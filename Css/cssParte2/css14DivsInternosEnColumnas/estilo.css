@@ -1,0 +1,60 @@
+
+p{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+img {
+    width: 80%;
+}
+
+.tabla{
+    margin: auto;
+    width: 80%;
+    height: 100px;
+    background-color: beige;
+}
+
+.columna {
+    background-color: beige;
+    float:left;
+    width:30%;
+    height: 500px;
+    padding: 17px;
+}
+
+.celda1{
+    background-color: aqua;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    text-align: center;
+    height: auto;
+    width: 80%;
+}
+
+.celda2{
+    background-color: aqua;
+    border: 5px solid beige;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    text-align: center;
+    height: auto;
+    width: 80%;
+}
+
+.celda5{
+    background-color: aqua;
+    border: 5px solid beige;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    text-align: center;
+    height: auto;
+    width: 80%;
+}

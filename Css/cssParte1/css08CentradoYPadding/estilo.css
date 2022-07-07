@@ -1,0 +1,31 @@
+div{
+    display: grid;
+    width: 50%;
+    margin: auto;
+}
+
+p {
+    font-size: 24px;
+    margin:0
+}
+
+h1 {
+    font-size: 45px;
+}
+
+div.blue{
+    background-color: lightblue;
+}
+
+div.green{
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: green;
+}
+
+div.yellow{
+    background-color: yellowgreen;
+    box-sizing: border-box;
+    padding-left: 3%;
+    padding-right: 3%;
+}

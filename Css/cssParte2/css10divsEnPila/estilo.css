@@ -1,0 +1,76 @@
+
+
+body{
+    background-color: aqua;
+}
+
+img {
+    width: 30%;
+}
+
+p.op2{
+    font-size: 2em;
+}
+
+div{
+    margin: auto;
+    width: 20%;
+    height: 100px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px; 
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+}
+
+div.div1{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    display: flex;
+    padding: 3%;
+    background: linear-gradient(orange,white,pink);
+    text-align:center;
+}
+
+div.div2{
+    display: flex;
+    padding: 3%;
+    background: radial-gradient(orange,white,pink);
+    text-align:center;
+}
+
+div.div3{
+    display: flex;
+    padding: 3%;
+    background: linear-gradient(45deg, orange,white,pink);
+    text-align:center;
+}
+
+div.div4{
+    box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+    padding: 0%;
+    padding-bottom: 6%;
+    padding-right: 6%;
+    background: linear-gradient(315deg, orange,white,pink);
+    text-align: left;
+}
+
+div.div5{
+    padding-bottom: 6%;
+    padding-right: 6%;
+    background: linear-gradient(45deg, orange,white,pink);
+    text-align: left;
+}
+
+
+
+
+
+
+
+

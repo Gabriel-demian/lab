@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    display: block;
+    height: 100%;
+}
+
+header {
+    height: 10%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+footer {
+    height: 10%;
+    color: white;
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+div {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+div.clear {
+    clear: both;
+}
+
+div.botones{
+	margin: 0;
+	background-color: darkgrey;
+	height: 10%;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+    margin: 0px;
+    height: 80%;
+    width: 100%;
+    overflow: auto;
+    background-color: beige;
+    display: block;
+}
+
+label {
+    display: block;
+    color: black;
+    margin-bottom: 1%;
+}
+
+input {
+    display: block;
+}
+
+.columna {
+    padding: 1%;
+    height: 30%;
+    float: left;
+    border-style: solid;
+    border-color: darkgrey;
+    border-width: thin;
+}
+
+.boton {
+    margin: 5px;
+    display: flex;
+    float: left;
+    width: 25%;
+    height: 80%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+}
+
+@media only screen and (min-width:1200px) {
+    .columna {
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .columna {
+        width: 40%;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    .columna {
+        width: 100%;
+    }
+}

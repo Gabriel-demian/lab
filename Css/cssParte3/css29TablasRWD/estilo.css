@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;    
+    font-size: 20px;
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+tbody
+{ 
+    height: 400px;
+    display: block;
+    overflow: auto;
+}
+
+.titulo {
+    width: 100%;
+    font-size: 2.3em;
+    background-color: gray;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+thead , tbody 
+{
+    display: inline-block;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tr {
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    height: 20px;
+}
+
+.tabla {
+    font-family: Helvetica;
+    border-collapse: collapse;
+    width: 100%;
+    height: 80%;
+}
+
+
+.foot {
+    width: 100%;
+    font-size: 2.3em;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position:fixed; 
+    bottom:0;
+}
+
+@media screen and (max-width:1000px) {
+    h1{
+        font-size: 1.5em;
+    }
+    [campo-dato='skype']
+    {   
+        display: none;
+    }
+    [campo-dato='twitter']
+    {   
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    h1{
+        font-size: 2em;
+    }
+    [campo-dato='mail']
+    {   
+        display: none;
+    }
+    [campo-dato='web']
+    {   
+        display: none;
+    }
+    [campo-dato='skype']
+    {   
+        display: none;
+    }
+    [campo-dato='twitter']
+    {   
+        display: none;
+    }
+}

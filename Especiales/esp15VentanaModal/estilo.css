@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-height: 100vh;
+    overflow: hidden;
+    
+}
+
+main {
+    height: 100vh;
+    background-color: blue;
+    padding: 2rem;
+}
+
+label {
+    display: block;
+    margin: 0.3rem 0;
+    font-weight: 600;
+    color: var(--color3);
+}
+
+input {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+select {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+input[type="submit"] {
+    width: 150px;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin: 1rem;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    background-color: white;
+    outline: none;
+}
+
+.form {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.form-input {
+    width: 45%;
+    display: inline-block;
+    height: 4rem;
+    margin: 1rem 0;
+}
+
+.form-desc,
+.form-button {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.form-desc,
+.form-button {
+    height: 4rem;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.modal {
+    display: auto;
+    width: 700px;
+    background-color: darkcyan;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+}
+
+.cerrar {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    margin: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s all;
+    border-radius: 16px;
+
+}
+
+.none {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.contenido {
+    pointer-events: auto;
+    opacity: 1;
+    color: white;
+}
+
+.contenido p{
+    margin: 1rem 0;
+}
+
+.contenido button{
+    width: 200px;
+    background-color: white;
+    height: 3rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    margin: 1rem 0;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+
+.desactivo {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+@media (max-width:900px){
+    .form {
+        width: 90%;
+        align-content: flex-start;
+    }
+
+    .form-input {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+@media (max-width:450px){
+    .form {
+        width: 100%;
+    }
+
+}

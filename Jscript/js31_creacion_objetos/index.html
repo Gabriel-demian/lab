@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <main>
+        <div>
+            <button id="crear">Crear</button>
+            <button id="limpiar">Limpiar</button>
+            <button id="info">Info</button>
+        </div>
+        <div id="lista" class="lista">
+            
+        </div>
+    </main>
+</body>
+<script>
+    document.getElementById("crear").onclick = ()=> {
+        let div = document.createElement("div"),
+        texto = "<h2>Elemento Creado ";
+        texto = texto + document.getElementById("lista").childNodes.length;
+        texto = texto + "</h2>";
+        div.className = "objetoDinamico";
+        div.innerHTML = texto;
+        document.getElementById("lista").appendChild(div);
+    }
+    
+    document.getElementById("limpiar").onclick = ()=> {
+        while(document.getElementById("lista").childNodes.length > 0) {
+            document.getElementById("lista").removeChild(document.getElementById("lista").childNodes[0]);
+        }
+    }
+
+    document.getElementById("info").onclick = ()=> {
+        alert("El lista tiene " + document.getElementById("lista").childNodes.length + " nodos");
+        if(document.getElementById("lista").childNodes.length > 0)
+            for (let i = 0; i < document.getElementById("lista").childNodes.length ; i++) {
+                alert("indice " + i + " " + document.getElementById("lista").childNodes[i].innerHTML );
+            }
+    }
+</script>
+
+</html>
