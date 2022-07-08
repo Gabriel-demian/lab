@@ -1,10 +1,9 @@
 <?php 
-    $dbname="bv1npn2veaacv2l7ghih"; 
-    $host="bv1npn2veaacv2l7ghih-mysql.services.clever-cloud.com"; 
-    $user ="u6uxnal5anrjzncq"; 
-    $password = "mnNP6kMFSJZGKiXvgWMD"; 
+    $dbname="br3fe8tgn4zpnkb9zrae"; 
+    $host="br3fe8tgn4zpnkb9zrae-mysql.services.clever-cloud.com"; 
+    $user ="uf0gulncszpwfg3o"; 
+    $password = "XkSQNAxhrorlhlx9Hrbm"; 
     $respuesta_estado = "resp";
-    $proyectos=[];
 
     try { 
         $dsn = "mysql:host=$host;dbname=$dbname";
@@ -15,6 +14,8 @@
         $respuesta_estado = $respuesta_estado . "\n" . $e->getMessage(); 
         echo ("falló");
     }
+    
+    $proyectos=[];
     
     $sql="select * from proyectos " ;
     

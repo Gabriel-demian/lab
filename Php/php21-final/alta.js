@@ -90,6 +90,7 @@ function EnviarNuevoProy() {
         // var objetoDato = JSON.parse(respuestaDelServer);
         // console.log(respuestaDelServer);
         // alert("NUEVO PROYECTO DADO DE ALTA!");
+        traerJson();
       },
       error: function (respuestaDelServer, estado) {
         console.log(respuestaDelServer, estado);

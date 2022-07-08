@@ -56,7 +56,9 @@ function armarTabla(json) {
         tdPais = document.createElement("td"),
         tdInicio = document.createElement("td"),
         tdIngresos = document.createElement("td");
-        tdOpciones = document.createElement("td");
+        tdPdf = document.createElement("td");
+        tdModi = document.createElement("td");
+        tdBorrar = document.createElement("td");
 
         tdRegistro.innerHTML = elemento.registro;
         tr.appendChild(tdRegistro);
@@ -76,8 +78,16 @@ function armarTabla(json) {
         tdIngresos.innerHTML = elemento.ingresos;
         tr.appendChild(tdIngresos);
 
-        tdOpciones.innerHTML = elemento.opciones;
-        tr.appendChild(tdOpciones);
+        tdPdf.innerHTML = "PDF";
+        
+        tr.appendChild(tdPdf);
+
+        tdModi.innerHTML = "Modi";
+        tdModi.onclick;
+        tr.appendChild(tdModi);
+
+        tdBorrar.innerHTML = "";
+        tr.appendChild(tdBorrar);
 
         $tabla.appendChild(tr);
     });

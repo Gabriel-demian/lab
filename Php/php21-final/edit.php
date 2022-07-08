@@ -5,6 +5,7 @@
     $proyectos=[];
     
     /*Datos*/
+    $registro = $_POST['registro'];
     $proyecto = $_POST['proyecto'];
     $referente = $_POST['referente'];
     $pais = $_POST['pais'];
