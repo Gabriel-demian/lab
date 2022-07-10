@@ -74,16 +74,16 @@ function armarTabla(json) {
         tdIngresos.innerHTML = elemento.ingresos;
         tr.appendChild(tdIngresos);
 
-        tdPdf.innerHTML = "PDF";
-        
-        tr.appendChild(tdPdf);
-
-        tdModi.innerHTML = "Modi";
-        tdModi.onclick;
+        tdModi = document.createElement("td");
+        tdModi.setAttribute("id", "modi-proy");
+        tdModi.innerHTML = "\
+            <img src='../recursos/pdf.png' class='btCeldaPDF'></img>\
+            <img src='../recursos/edit.png' class='btCeldaModi' id="+elemento.registro+"></img>\
+            <img src='../recursos/delete.png' class='btCeldaDelete'></img>";
         tr.appendChild(tdModi);
 
-        tdBorrar.innerHTML = "";
-        tr.appendChild(tdBorrar);
+
+
 
         $tabla.appendChild(tr);
     });

@@ -12,8 +12,6 @@
         
         $stmt->execute();
 
-
-
         if(!$stmt) {
           die("Query Failed.");
         }

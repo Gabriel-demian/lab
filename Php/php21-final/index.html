@@ -33,9 +33,7 @@
                         <th class="pais" id="pais">Pais de Origen</th>
                         <th class="inicio" id="inicio">Fecha de inicio</th>
                         <th class="ingresos" id="ingresos">Ingresos</th>
-                        <th class="pdf" id="pdf-proy">PDF</th>
                         <th class="modi" id="modi-proy">Modificar</th>
-                        <th class="borrar" id="borrar-proy">Borrar</th>
                     </tr>
                     <tr class="filter">
                         <td>
@@ -129,50 +127,6 @@
 
     <!-- FIN DEL MODAL DE ALTA-->
 
-
-    <!-- INICIO DEL MODAL DE EDICION -->
-
-    <div class="modal none" id="modal-modi">
-        <button class="cerrar" id="cerrar">X</button>
-        <form class="form" id="form-modi" method="post" enctype="multipart/form-data">
-            <h2>Modificacion de movil policial</h2>
-            <div class="form-nombre">
-                <label for="localidad">Localidad</label>
-                <select id="localidad-modi" name="localidad" required>
-                </select>
-            </div>
-            <div class="form-input">
-                <label for="nMovil">Nº de Movil</label>
-                <input type="text" name="nMovil" id="nMovil-modi" required>
-            </div>
-            <div class="form-input">
-                <label for="patente">Patente</label>
-                <input type="text" name="patente" id="patente-modi" required>
-            </div>
-            <div class="form-nombre">
-                <label for="agente">Agente Policial</label>
-                <input type="text" name="agente" id="agente-modi" required>
-            </div>
-            <div class="form-input">
-                <label for="nPlaca">Nº de Placa</label>
-                <input type="text" name="nPlaca" id="nPlaca-modi" required>
-            </div>
-            
-            <div class="form-input">
-                <label for="fecha">Fecha Alta</label>
-                <input type="date" name="fecha" id="dia-modi" required>
-            </div>
-            <div class="form-archivo">
-                <label for="pdf">Subir Archivo</label>
-                <input type="file" name="pdf" id="pdf-modi">
-            </div>
-            <div class="form-button">
-                <input type="submit" value="ENVIAR" id="boton-modi">
-            </div>
-        </form>
-    </div>
-
-    <!-- FIN DEL MODAL DE EDICION-->
 </body>
 <script src="script.js"></script>
 <script src="alta.js"></script>
