@@ -2,9 +2,9 @@
     include "db.php";
     $respuesta_estado = "resp";
 
-    if(isset($_GET['id'])) {
-        $id = $_GET['id'];
-        $sql = "DELETE FROM task WHERE id = $id";
+    if(isset($_GET['registro'])) {
+        $registro = $_GET['registro'];
+        $sql = "DELETE FROM proyectos WHERE registro = $registro";
 
         $stmt = $dbh->prepare($sql);
 

@@ -12,17 +12,22 @@
     $inicio = $_POST['inicio'];
     $ingresos = $_POST['ingresos'];
     
-    $respuesta_estado = $proyecto ." ". $referente ." ". $pais ." ". $inicio ." ". $ingresos;
-    $query = "INSERT INTO proyectos (proyecto,referente,pais,inicio,ingresos) VALUES ('$proyecto','$referente','$pais','$inicio',$ingresos);";
-    
-   
-    $result = mysqli_query($connection, $query);
+    $sql = "INSERT INTO `proyectos` ('registro', 'proyecto', 'referente', 'pais', 'inicio', 'ingresos') VALUES ('$proyecto','$referente','$pais','$inicio',$ingresos);";
+    $result = $conn->query($sql);
 
+    if ($result === TRUE) 
+    {
+        $respuesta_estado = "Artículo modificado exitosamente!</br>Sin modificar el archivo PDF";
+        $objArticulos->success = TRUE;
+    } 
+    else 
+    {
+        $respuesta_estado = "Error al modificar el artículo: " . $objArticulos->codArticulo = $_POST['codArticulo'];
+    }
     if(!$result){
         die('Query FAILED' . mysqli_error());
     }
 
-    $objArticulos->respuesta_estado = $respuesta_estado;
     echo json_encode($objArticulos);
 
 ?>
