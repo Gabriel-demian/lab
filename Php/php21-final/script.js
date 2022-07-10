@@ -98,8 +98,24 @@ document.getElementById("inicio").addEventListener("click", ()=> cambiarOrden("i
 document.getElementById("ingresos").addEventListener("click", ()=> cambiarOrden("ingresos"));
 
 
-document.getElementById("btCeldaPDF").addEventListener("click", ()=> verificarLog());
 
 function verificarLog(){
     console.log("FUNCIONA EL BOTON");
+}
+
+
+if (window.addEventListener) {
+    document.addEventListener('click', function (e) {
+      if (e.target.getAttribute("class") != null){
+        if (e.target.getAttribute("class").indexOf("btCeldaModi") === 0) {
+            verificarLog();
+        }
+        if (e.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
+            verificarLog();
+        }
+        if (e.target.getAttribute("class").indexOf("btCeldaDelete") === 0) {
+            verificarLog();
+        }
+      }
+    });
 }
