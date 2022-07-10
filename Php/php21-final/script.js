@@ -77,20 +77,16 @@ function armarTabla(json) {
         tdModi = document.createElement("td");
         tdModi.setAttribute("id", "modi-proy");
         tdModi.innerHTML = "\
-            <img src='../recursos/pdf.png' class='btCeldaPDF'></img>\
+            <img src='../recursos/pdf.png' class='btCeldaPDF' ></img>\
             <img src='../recursos/edit.png' class='btCeldaModi' id="+elemento.registro+"></img>\
-            <img src='../recursos/delete.png' class='btCeldaDelete'></img>";
+            <img src='../recursos/delete.png' class='btCeldaDelete' ></img>";
         tr.appendChild(tdModi);
-
-
-
 
         $tabla.appendChild(tr);
     });
 
     document.getElementById("numRegistro").innerHTML = `Numero de registros: ${json.cuenta}`;
 }
-
 
 document.getElementById("cargar").addEventListener("click", ()=> traerJson());
 document.getElementById("limpiar").addEventListener("click", ()=> vaciarTabla());
@@ -101,3 +97,9 @@ document.getElementById("pais").addEventListener("click", ()=> cambiarOrden("pai
 document.getElementById("inicio").addEventListener("click", ()=> cambiarOrden("inicio"));
 document.getElementById("ingresos").addEventListener("click", ()=> cambiarOrden("ingresos"));
 
+
+document.getElementById("btCeldaPDF").addEventListener("click", ()=> verificarLog());
+
+function verificarLog(){
+    console.log("FUNCIONA EL BOTON");
+}
