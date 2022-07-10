@@ -1,51 +1,47 @@
-function cargarVentanaModif(registro){
-
+function cargarVentanaModif(){
+    
 }
-
-
-
-
 // Get the modal
-var modal = document.getElementById("myModalEdit");
+var modal2 = document.getElementById("myModalEdit");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("closeEdit")[0];
 
 // When the user clicks the button, open the modal 
 function modalEditar() {
-  modal.style.display = "block";
+  modal2.style.display = "block";
   obtenerPaises(); // carga la lista de paises disponibles
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-  modal.style.display = "none";
+  modal2.style.display = "none";
 }
 
 // boton Submit - Cargar nuevo articulo
 $('#btnSubmitModif').click(function () {
   
   
-  if (validarAlta()) {  // se deja como segunda validación
+  if (validarEdit()) {  // se deja como segunda validación
     EnviarProyModif();
   }
 });
 
 
 $('#btnLimpiar').click(function limpiarForm() {
-  document.getElementById("alta_proyecto").value = "";
-  document.getElementById("alta_referente").value = "";
-  document.getElementById("alta_pais").value = "";
-  document.getElementById("alta_fecha").value = "";
-  document.getElementById("alta_ingresos").value = "";
+  document.getElementById("edit_proyecto").value = "";
+  document.getElementById("edit_referente").value = "";
+  document.getElementById("edit_pais").value = "";
+  document.getElementById("edit_fecha").value = "";
+  document.getElementById("edit_ingresos").value = "";
 });
 
-function validarAlta() {
-  const $proyecto = document.querySelector("#alta_proyecto"),
-    $referente = document.querySelector("#alta_referente"),
-    $pais = document.querySelector("#alta_pais"),
-    $inicio = document.querySelector("#alta_fecha"),
-    $ingresos = document.querySelector("#alta_ingresos");
+function validarEdit() {
+  const $proyecto = document.querySelector("#edit_proyecto"),
+    $referente = document.querySelector("#edit_referente"),
+    $pais = document.querySelector("#edit_pais"),
+    $inicio = document.querySelector("#edit_fecha"),
+    $ingresos = document.querySelector("#edit_ingresos");
 
   const $inicio2 = $inicio.value.split("-").join("-");
 
@@ -53,7 +49,7 @@ function validarAlta() {
     return false;
   }
   else {
-    document.getElementById('btnSubmit').disabled = false;// si todos los campos tienen datos entonces se habilita el botón de alta
+    document.getElementById('btnSubmitModif').disabled = false;// si todos los campos tienen datos entonces se habilita el botón de modificación
     return true;
   }
 }
@@ -61,9 +57,9 @@ function validarAlta() {
 function EnviarProyModif() {
 
   // return false
-  var confirmaAlta = confirm("Esta seguro que deseea modificar el proyecto ?");
+  var confirmaModi = confirm("Esta seguro que deseea modificar el proyecto ?");
 
-  if (confirmaAlta) {
+  if (confirmaModi) {
     const $registro = document.querySelector("#edit_registro"),
       $proyecto = document.querySelector("#edit_proyecto"),
       $referente = document.querySelector("#edit_referente"),
@@ -75,7 +71,7 @@ function EnviarProyModif() {
 
     var request = $.ajax({
       type: "POST",
-      url: "./alta.php",
+      url: "./edit.php",
       // processData: false,
       // contentType: false,
       // cache: false,
@@ -91,7 +87,6 @@ function EnviarProyModif() {
         console.log(respuestaDelServer, estado);
         alert(respuestaDelServer);
         // var objetoDato = JSON.parse(respuestaDelServer);
-        // alert("NUEVO PROYECTO DADO DE ALTA!");
         traerJson();
       },
       error: function (respuestaDelServer, estado) {
@@ -134,8 +129,8 @@ function cargarOpciones(listaPaises){
 }
 
 
-document.getElementById("edit_proyecto").onkeyup = () => validarAlta();
-document.getElementById("edit_referente").onkeyup = () => validarAlta();
-document.getElementById("edit_pais").onkeyup = () => validarAlta();
-document.getElementById("edit_fecha").onkeyup = () => validarAlta();
-document.getElementById("edit_ingresos").onkeyup = () => validarAlta();
+document.getElementById("edit_proyecto").onkeyup = () => validarEdit();
+document.getElementById("edit_referente").onkeyup = () => validarEdit();
+document.getElementById("edit_pais").onkeyup = () => validarEdit();
+document.getElementById("edit_fecha").onkeyup = () => validarEdit();
+document.getElementById("edit_ingresos").onkeyup = () => validarEdit();

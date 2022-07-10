@@ -21,8 +21,6 @@ span.onclick = function () {
 
 // boton Submit - Cargar nuevo articulo
 $('#btnSubmit').click(function () {
-  
-  
   if (validarAlta()) {  // se deja como segunda validación
     EnviarNuevoProy();
   }
