@@ -45,7 +45,6 @@ function validarAlta() {
     $ingresos = document.querySelector("#alta_ingresos");
 
   const $inicio2 = $inicio.value.split("-").join("-");
-  console.log($inicio2);
 
   if ($proyecto.value == "" || $referente.value == "" || $pais.value == "" || $inicio.value == "" || $ingresos.value == "") {
     return false;
@@ -71,7 +70,6 @@ function EnviarNuevoProy() {
       $ingresos = document.querySelector("#alta_ingresos");
 
     const $inicio2 = $inicio.value.split("-").join("-");
-    console.log($inicio2);
 
     var request = $.ajax({
       type: "POST",
@@ -90,7 +88,6 @@ function EnviarNuevoProy() {
         console.log(respuestaDelServer, estado);
         alert(respuestaDelServer);
         // var objetoDato = JSON.parse(respuestaDelServer);
-        // console.log(respuestaDelServer);
         // alert("NUEVO PROYECTO DADO DE ALTA!");
         traerJson();
       },
@@ -109,8 +106,6 @@ function obtenerPaises(){
     type: "GET",
     url: "./listaPaises.php",
     success: function(respuestaDelServer) {
-        console.log("LISTA DE PAISES:");
-        console.log(respuestaDelServer);
         listaPaises = JSON.parse(respuestaDelServer);
         cargarOpciones(listaPaises)
     }

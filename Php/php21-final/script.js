@@ -19,9 +19,6 @@ function cambiarOrden(e) {
 }
 
 function traerJson() {
-
-    console.log($orden.value);
-
     jQuery.ajax({
         type: "GET",
         url: "./database.php",
@@ -36,7 +33,6 @@ function traerJson() {
         },
         success: function(respuestaDelServer) {
             var objJson=JSON.parse(respuestaDelServer);
-            console.log(objJson);
             armarTabla(objJson);
         }//cierra funcion asignada al success
     });//cierra ajax
