@@ -93,7 +93,8 @@ if (window.addEventListener) {
     document.addEventListener('click', function (elemento) {
       if (elemento.target.getAttribute("class") != null){
         if (elemento.target.getAttribute("class").indexOf("btCeldaModi") === 0) {
-            verificarLog();
+            cargarVentanaModif(elemento.target.id);
+            modalEditar();
         }
         if (elemento.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
             verificarLog();

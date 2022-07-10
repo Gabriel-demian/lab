@@ -55,7 +55,7 @@
                             <input type="text" id="f_ingresos" placeholder="filtro ingresos" />
                         </td>
                         <td>
-                            <input type="" id="" placeholder=" " disabled/>
+                            <input type="" id="" placeholder=" " disabled />
                         </td>
                     </tr>
                 </thead>
@@ -68,19 +68,20 @@
         <h3 id="numRegistro">Numero de registros:</h3>
     </footer>
 
-    <!-- INICIO DEL MODAL DE ALTA -->
+    
+<!-- |------------------------------------------------------------------------------------------------------------------------------------| -->
 
+
+    <!-- INICIO DEL MODAL DE ALTA -->
 
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                
                 <h2>Modal de alta de Proyectos</h2>
-                <span class="close">&times;</span>
+                <span class="close" id="close">&times;</span>
             </div>
             <form method="POST" id="form">
-
                 <div class="row justify-content-md-center">
                     <div class="form-label-group">
                         <div class="header-inputs">
@@ -96,7 +97,7 @@
                             <p>Pais:</p>
                             <select id="alta_pais" name="alta_pais" required></select>
                         </div>
-                        
+
                         <div class="header-inputs">
                             <p>Fecha de alta:</p>
                             <input type="date" id="alta_fecha" value="" required />
@@ -104,18 +105,17 @@
 
                         <div class="header-inputs">
                             <p>Ingresos del proyecto:</p>
-                            <input type="number" id="alta_ingresos" class="form-control value=" required min = 0 />
+                            <input type="number" id="alta_ingresos" class="form-control value=" required min="0" />
                         </div>
 
-                        <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary btn-block" disabled   >
+                        <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary btn-block" disabled>
                             Dar de alta
                         </button>
-                        <button id="btnLimpiar" class="btn btn-lg btn-primary btn-block" >
+                        <button id="btnLimpiar" class="btn btn-lg btn-primary btn-block">
                             Limpiar
                         </button>
                     </div>
                 </div>
-
             </form>
 
             <div class="modal-footer">
@@ -124,12 +124,72 @@
         </div>
     </div>
 
-
     <!-- FIN DEL MODAL DE ALTA-->
 
+
+<!-- |------------------------------------------------------------------------------------------------------------------------------------| -->
+
+
+    <!-- INICIO DEL MODAL DE MODIFICACIÓN -->
+
+    <div id="myModalEdit" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Modal de alta de Proyectos</h2>
+                <span class="closeEdit" >&times;</span>
+            </div>
+            <form method="POST" id="form">
+                <div class="row justify-content-md-center">
+                    <div class="form-label-group">
+                        <div class="header-inputs">
+                            <p>N° de registro:</p>
+                            <p id="codArticuloOriginal" name="codArticuloOriginal" type="text"></p>
+                        </div>
+                        <div class="header-inputs">
+                            <p>Nombre del proyecto:</p>
+                            <input type="text" id="edit_proyecto" value="" required />
+                        </div>
+                        <div class="header-inputs">
+                            <p>Nombre del referente:</p>
+                            <input type="text" id="edit_referente" value="" required />
+                        </div>
+
+                        <div class="header-inputs">
+                            <p>Pais:</p>
+                            <select id="alta_pais" name="edit_pais" required></select>
+                        </div>
+
+                        <div class="header-inputs">
+                            <p>Fecha de alta:</p>
+                            <input type="date" id="edit_fecha" value="" required />
+                        </div>
+
+                        <div class="header-inputs">
+                            <p>Ingresos del proyecto:</p>
+                            <input type="number" id="edit_ingresos" class="form-control value=" required min="0" />
+                        </div>
+
+                        <button type="submit" id="btnSubmitModif" class="btn btn-lg btn-primary btn-block" disabled>
+                            Modificar
+                        </button>
+                        <button id="btnLimpiar" class="btn btn-lg btn-primary btn-block">
+                            Limpiar
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="modal-footer">
+                <h3>.</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN DEL MODAL DE MODIFICACIÓN-->
 </body>
 <script src="script.js"></script>
 <script src="alta.js"></script>
 <script src="delete.js"></script>
-
+<script src="edit.js"></script>
 </html>

@@ -189,7 +189,7 @@ td {
 }
 
 /* The Close Button */
-.close {
+.close, .closeEdit {
   color: white;
   float: right;
   font-size: 28px;
@@ -197,7 +197,9 @@ td {
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.closeEdit:hover,
+.closeEdit:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
