@@ -7,10 +7,9 @@ function elminarArticulo(registro){
             url: "./delete.php",
             data: {registro: registro},
             success: function(respuestaDelServer,estado) {
-                var objetoDato = JSON.parse(respuestaDelServer);
-                console.log(objetoDato);
-                PopUpMostrarMensaje(objetoDato.respuesta_estado, objetoDato.success);
-                LlenarTabla(false);
+                alert("registro "+registro+" fue eliminado");
+                vaciarTabla();
+                traerJson();
             }//cierra funcion asignada al success
         });//cierra ajax
     }

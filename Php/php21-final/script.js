@@ -76,16 +76,33 @@ function armarTabla(json) {
 
         tdModi = document.createElement("td");
         tdModi.setAttribute("id", "modi-proy");
+        tdModi.setAttribute("class", "img-responsive");
         tdModi.innerHTML = "\
             <img src='../recursos/pdf.png' class='btCeldaPDF' ></img>\
             <img src='../recursos/edit.png' class='btCeldaModi' id="+elemento.registro+"></img>\
-            <img src='../recursos/delete.png' class='btCeldaDelete' ></img>";
+            <img src='../recursos/delete.png' class='btCeldaDelete' id="+elemento.registro+"></img>";
         tr.appendChild(tdModi);
 
         $tabla.appendChild(tr);
     });
 
     document.getElementById("numRegistro").innerHTML = `Numero de registros: ${json.cuenta}`;
+}
+
+if (window.addEventListener) {
+    document.addEventListener('click', function (elemento) {
+      if (elemento.target.getAttribute("class") != null){
+        if (elemento.target.getAttribute("class").indexOf("btCeldaModi") === 0) {
+            verificarLog();
+        }
+        if (elemento.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
+            verificarLog();
+        }
+        if (elemento.target.getAttribute("class").indexOf("btCeldaDelete") === 0) {
+            elminarArticulo(elemento.target.id);
+        }
+      }
+    });
 }
 
 document.getElementById("cargar").addEventListener("click", ()=> traerJson());
@@ -101,21 +118,4 @@ document.getElementById("ingresos").addEventListener("click", ()=> cambiarOrden(
 
 function verificarLog(){
     console.log("FUNCIONA EL BOTON");
-}
-
-
-if (window.addEventListener) {
-    document.addEventListener('click', function (e) {
-      if (e.target.getAttribute("class") != null){
-        if (e.target.getAttribute("class").indexOf("btCeldaModi") === 0) {
-            verificarLog();
-        }
-        if (e.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
-            verificarLog();
-        }
-        if (e.target.getAttribute("class").indexOf("btCeldaDelete") === 0) {
-            verificarLog();
-        }
-      }
-    });
 }
