@@ -11,6 +11,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
   modal.style.display = "block";
+  console.log("preparando paises en alta");
   obtenerPaises(); // carga la lista de paises disponibles
 }
 
@@ -54,9 +55,6 @@ function validarAlta() {
 }
 
 function EnviarNuevoProy() {
-
-
-
   // return false
   var confirmaAlta = confirm("Esta seguro que deseea añadir el neuvo proyecto ?");
 
@@ -99,7 +97,7 @@ function EnviarNuevoProy() {
 
 function obtenerPaises(){
   var listaPaises;
-
+  console.log("obteniendo paises en alta");
   jQuery.ajax({
     type: "GET",
     url: "./listaPaises.php",
@@ -111,7 +109,7 @@ function obtenerPaises(){
 }
 
 function cargarOpciones(listaPaises){
-  
+  console.log("cargando paises en alta");
   var newOpt;
   //cargar opciones para paises de ventana modal
   listaPaises.paises.forEach(element => {

@@ -10,7 +10,8 @@ var span = document.getElementsByClassName("closeEdit")[0];
 // When the user clicks the button, open the modal 
 function modalEditar() {
   modal2.style.display = "block";
-  obtenerPaises(); // carga la lista de paises disponibles
+  console.log("cargando paises en modificación");
+  obtenerPaisesModif(); // carga la lista de paises disponibles
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -97,7 +98,7 @@ function EnviarProyModif() {
   }
 }
 
-function obtenerPaises(){
+function obtenerPaisesModif(){
   var listaPaises;
 
   jQuery.ajax({
@@ -105,12 +106,12 @@ function obtenerPaises(){
     url: "./listaPaises.php",
     success: function(respuestaDelServer) {
         listaPaises = JSON.parse(respuestaDelServer);
-        cargarOpciones(listaPaises)
+        cargarOpcionesModif(listaPaises)
     }
   });
 }
 
-function cargarOpciones(listaPaises){
+function cargarOpcionesModif(listaPaises){
   
   var newOpt;
   //cargar opciones para paises de ventana modal
