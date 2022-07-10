@@ -27,7 +27,7 @@
 
     While($fila = $stmt->fetch()) {
         $objPais = new stdClass();
-        $objPais->paises=$fila['pais'];
+        $objPais->pais=$fila['pais'];
         array_push($paises,$objPais);
     }
 

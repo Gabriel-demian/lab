@@ -11,6 +11,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
   modal.style.display = "block";
+  obtenerPaises(); // carga la lista de paises disponibles
 }
 
 // When the user clicks on <span> (x), close the modal
@@ -20,6 +21,8 @@ span.onclick = function () {
 
 // boton Submit - Cargar nuevo articulo
 $('#btnSubmit').click(function () {
+  
+  
   if (validarAlta()) {  // se deja como segunda validación
     EnviarNuevoProy();
   }
@@ -33,7 +36,6 @@ $('#btnLimpiar').click(function limpiarForm() {
   document.getElementById("alta_fecha").value = "";
   document.getElementById("alta_ingresos").value = "";
 });
-
 
 function validarAlta() {
   const $proyecto = document.querySelector("#alta_proyecto"),
@@ -98,6 +100,39 @@ function EnviarNuevoProy() {
       }//cierra funcion asignada al success
     });//cierra ajax
   }
+}
+
+function obtenerPaises(){
+  var listaPaises;
+
+  jQuery.ajax({
+    type: "GET",
+    url: "./listaPaises.php",
+    success: function(respuestaDelServer) {
+        console.log("LISTA DE PAISES:");
+        console.log(respuestaDelServer);
+        listaPaises = JSON.parse(respuestaDelServer);
+        cargarOpciones(listaPaises)
+    }
+  });
+}
+
+function cargarOpciones(listaPaises){
+  
+  var newOpt;
+  //cargar opciones para paises de ventana modal
+  listaPaises.paises.forEach(element => {
+      newOpt = document.createElement("option");
+
+      newOpt.setAttribute("value", element.pais);
+      
+      if( parseInt(element.pais) == 0 ){
+          newOpt.setAttribute("selected", true);
+      }
+      newOpt.innerHTML = newOpt.value;
+
+      document.getElementById("alta_pais").appendChild(newOpt);   
+  });
 }
 
 
