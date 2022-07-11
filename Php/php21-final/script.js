@@ -82,7 +82,7 @@ function armarTabla(json) {
 
         tdModi = document.createElement("td");
         tdModi.setAttribute("id", "modi-proy");
-        tdModi.setAttribute("class", "img-responsive");
+        //tdModi.setAttribute("class", "img-responsive");
         tdModi.innerHTML = "\
             <img src='../recursos/pdf.png' class='btCeldaPDF' ></img>\
             <img src='../recursos/edit.png' class='btCeldaModi' id="+elemento.registro+"></img>\
