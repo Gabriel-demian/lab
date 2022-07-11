@@ -1,5 +1,22 @@
 <?php 
-    include "db.php";
+    $dbname="br3fe8tgn4zpnkb9zrae"; 
+    $host="br3fe8tgn4zpnkb9zrae-mysql.services.clever-cloud.com"; 
+    $host2="mysql.services.clever-cloud.com";
+    $user ="uf0gulncszpwfg3o"; 
+    $password = "XkSQNAxhrorlhlx9Hrbm"; 
+
+
+    $connection = mysqli_connect ( $host, $user, $password, $dbname );
+
+    $objArticulos = new stdClass();
+    $objArticulos->success = FALSE;
+
+    if($connection){
+        echo ("exito");
+        $objArticulos->success = TRUE;
+    }else{
+        echo ("mal");
+    }
 
     $respuesta_estado = "resp";
     
@@ -10,9 +27,9 @@
     $pais = $_POST['pais'];
     $inicio = $_POST['inicio'];
     $ingresos = $_POST['ingresos'];
-    
-    $sql = "INSERT INTO `proyectos` ('proyecto', 'referente', 'pais', 'inicio', 'ingresos') VALUES ('$proyecto','$referente','$pais','$inicio',$ingresos) WHERE 'registro' = '$registro';";
-    $result = $conn->query($sql);
+  
+    $sql = "UPDATE `proyectos` SET `proyecto`= '$proyecto',`referente`='$referente',`pais`= '$pais',`inicio`='$inicio',`ingresos`= $ingresos WHERE registro = $registro;";
+    $result = $connection->query($sql);
 
     if ($result === TRUE) 
     {
@@ -27,7 +44,7 @@
         die('Query FAILED' . mysqli_error());
     }
 
-    mysqli_close($conn);
+    mysqli_close($connection);
 
     $objArticulos->respuesta_estado = $respuesta_estado;
     echo json_encode($objArticulos);

@@ -1,6 +1,13 @@
-function cargarVentanaModif(){
-    
+function cargarVentanaModif(elemento){
+  console.log(elemento);
+  document.querySelector("#edit_registro").value = elemento.querySelector('[name="registro"]').innerHTML;
+  document.querySelector("#edit_proyecto").value = elemento.querySelector('[name="proyecto"]').innerHTML;
+  document.querySelector("#edit_referente").value = elemento.querySelector('[name="referente"]').innerHTML;
+  document.querySelector("#edit_pais").value = elemento.querySelector('[name="pais"]').innerHTML;
+  document.querySelector("#edit_fecha").value = elemento.querySelector('[name="inicio"]').innerHTML;
+  document.querySelector("#edit_ingresos").value = elemento.querySelector('[name="ingresos"]').innerHTML;
 }
+
 // Get the modal
 var modal2 = document.getElementById("myModalEdit");
 
@@ -82,12 +89,14 @@ function EnviarProyModif() {
         ingresos: $ingresos.value
       },
       success: function (respuestaDelServer, estado) {
+        console.log("EDIITTT!!!");
         console.log(respuestaDelServer, estado);
         alert(respuestaDelServer);
         // var objetoDato = JSON.parse(respuestaDelServer);
         traerJson();
       },
       error: function (respuestaDelServer, estado) {
+        console.log("EDIITTT!!!");
         console.log(respuestaDelServer, estado);
         // alert("ERROR");
       }//cierra funcion asignada al success

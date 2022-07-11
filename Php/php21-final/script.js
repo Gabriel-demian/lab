@@ -57,21 +57,27 @@ function armarTabla(json) {
         tdBorrar = document.createElement("td");
 
         tdRegistro.innerHTML = elemento.registro;
+        tdRegistro.setAttribute("name", "registro");
         tr.appendChild(tdRegistro);
 
         tdProyecto.innerHTML = elemento.proyecto;
+        tdProyecto.setAttribute("name", "proyecto");
         tr.appendChild(tdProyecto);
 
         tdReferente.innerHTML = elemento.referente;
+        tdReferente.setAttribute("name", "referente");
         tr.appendChild(tdReferente);
 
         tdPais.innerHTML = elemento.pais;
+        tdPais.setAttribute("name", "pais");
         tr.appendChild(tdPais);
 
         tdInicio.innerHTML = elemento.inicio;
+        tdInicio.setAttribute("name", "inicio");
         tr.appendChild(tdInicio);
 
         tdIngresos.innerHTML = elemento.ingresos;
+        tdIngresos.setAttribute("name", "ingresos");
         tr.appendChild(tdIngresos);
 
         tdModi = document.createElement("td");
@@ -93,7 +99,8 @@ if (window.addEventListener) {
     document.addEventListener('click', function (elemento) {
       if (elemento.target.getAttribute("class") != null){
         if (elemento.target.getAttribute("class").indexOf("btCeldaModi") === 0) {
-            cargarVentanaModif(elemento.target.id);
+            console.log(elemento.target.parentElement.parentElement)
+            cargarVentanaModif(elemento.target.parentElement.parentElement);
             modalEditar();
         }
         if (elemento.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
