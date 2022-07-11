@@ -80,15 +80,14 @@ function EnviarProyModif() {
       // processData: false,
       // contentType: false,
       // cache: false,
-      /*data: {
+      data: {
         registro: $registro.value,
         proyecto: $proyecto.value,
         referente: $referente.value,
         pais: $pais.value,
         inicio: $inicio2,
         ingresos: $ingresos.value
-      },*/
-      data: new FormData($("#formModif")[0]),
+      },
       success: function (respuestaDelServer, estado) {
         console.log("EDIITTT!!!");
         console.log(respuestaDelServer, estado);
