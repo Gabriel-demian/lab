@@ -11,7 +11,7 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function () {
   modal.style.display = "block";
-  console.log("preparando paises en alta");
+  console.log("cargando paises en alta");
   obtenerPaises(); // carga la lista de paises disponibles
 }
 
@@ -109,7 +109,7 @@ function obtenerPaises(){
 }
 
 function cargarOpciones(listaPaises){
-  console.log("cargando paises en alta");
+  console.log("obteniendo paises en alta");
   var newOpt;
   //cargar opciones para paises de ventana modal
   listaPaises.paises.forEach(element => {

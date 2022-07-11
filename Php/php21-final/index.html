@@ -81,7 +81,7 @@
                 <h2>Modal de alta de Proyectos</h2>
                 <span class="close" id="close">&times;</span>
             </div>
-            <form method="POST" id="form">
+            <form enctype="multipart/form-data" method="POST" id="form">
                 <div class="row justify-content-md-center">
                     <div class="form-label-group">
                         <div class="header-inputs">
@@ -107,6 +107,14 @@
                             <p>Ingresos del proyecto:</p>
                             <input type="number" id="alta_ingresos" class="form-control value=" required min="0" />
                         </div>
+
+
+                        <div class="header-inputs">
+                            <label for="formPDF">PDF</label>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+                            <input id="formPDF" type="file" name="formPDF">
+                        </div>
+
 
                         <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary btn-block" disabled>
                             Dar de alta
@@ -139,7 +147,7 @@
                 <h2>Modal de Modificación de Proyectos</h2>
                 <span class="closeEdit" >&times;</span>
             </div>
-            <form method="POST" id="form">
+            <form method="POST" id="formModif">
                 <div class="row justify-content-md-center">
                     <div class="form-label-group">
                         <div class="header-inputs">
@@ -168,6 +176,12 @@
                         <div class="header-inputs">
                             <p>Ingresos del proyecto:</p>
                             <input type="number" id="edit_ingresos" class="form-control value=" required min="0" />
+                        </div>
+
+                        <div class="header-inputs">
+                            <label for="formPDF">PDF</label>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+                            <input id="formPDF" type="file" name="formPDF">
                         </div>
 
                         <button type="submit" id="btnSubmitModif" class="btn btn-lg btn-primary btn-block" disabled>
