@@ -147,7 +147,7 @@
                 <h2>Modal de Modificación de Proyectos</h2>
                 <span class="closeEdit" >&times;</span>
             </div>
-            <form method="POST" id="formModif">
+            <form enctype="multipart/form-data" method="POST" id="formModif">
                 <div class="row justify-content-md-center">
                     <div class="form-label-group">
                         <div class="header-inputs">
@@ -201,6 +201,18 @@
     </div>
 
     <!-- FIN DEL MODAL DE MODIFICACIÓN-->
+
+    <div id="modalWindowPDF" class="modalWindowPDFDisabled">
+        <div class="modalWindowHeader" >
+            <h3>Encabezado de ventana PDF</h3>
+            <button class="btnCloseWindow" id="btnCloseWindowPDF"></button>
+        </div>
+        <div id="mwBodyPDF">
+            <div class="ContainerPDF" id="ContainerPDF">
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="script.js"></script>
 <script src="alta.js"></script>

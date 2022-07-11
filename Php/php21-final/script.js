@@ -104,13 +104,26 @@ if (window.addEventListener) {
             modalEditar();
         }
         if (elemento.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
-            verificarLog();
+            MostrarVentanaModalPDF();
         }
         if (elemento.target.getAttribute("class").indexOf("btCeldaDelete") === 0) {
             elminarArticulo(elemento.target.id);
         }
       }
     });
+}
+
+function MostrarVentanaModalPDF(){
+    $('#modalWindowPDF').attr("class","modalWindowPDFEnabled");
+}
+
+$('#btnCloseWindowPDF').click(function(){
+    cerrarVentanaModalPDF()
+});
+
+function cerrarVentanaModalPDF(){
+    $('#modalWindowPDF').attr("class","modalWindowPDFDisabled");
+    document.getElementById("ContainerPDF").removeChild(document.getElementById("ContainerPDF").firstChild); 
 }
 
 document.getElementById("cargar").addEventListener("click", ()=> traerJson());
@@ -121,9 +134,3 @@ document.getElementById("referente").addEventListener("click", ()=> cambiarOrden
 document.getElementById("pais").addEventListener("click", ()=> cambiarOrden("pais"));
 document.getElementById("inicio").addEventListener("click", ()=> cambiarOrden("inicio"));
 document.getElementById("ingresos").addEventListener("click", ()=> cambiarOrden("ingresos"));
-
-
-
-function verificarLog(){
-    console.log("FUNCIONA EL BOTON");
-}
