@@ -86,13 +86,12 @@
                     <div class="form-label-group">
                         <div class="header-inputs">
                             <p>Nombre del proyecto:</p>
-                            <input type="text" id="alta_proyecto" value="" required />
+                            <input type="text" id="alta_proyecto" name="alta_proyecto" value="" required />
                         </div>
                         <div class="header-inputs">
                             <p>Nombre del referente:</p>
-                            <input type="text" id="alta_referente" value="" required />
+                            <input type="text" id="alta_referente" name="alta_referente" value="" required />
                         </div>
-
                         <div class="header-inputs">
                             <p>Pais:</p>
                             <select id="alta_pais" name="alta_pais" required></select>
@@ -100,22 +99,18 @@
 
                         <div class="header-inputs">
                             <p>Fecha de alta:</p>
-                            <input type="date" id="alta_fecha" value="" required />
+                            <input type="date" id="alta_fecha" name="alta_fecha"  value="" required />
                         </div>
 
                         <div class="header-inputs">
                             <p>Ingresos del proyecto:</p>
-                            <input type="number" id="alta_ingresos" class="form-control value=" required min="0" />
+                            <input type="number" id="alta_ingresos" name="alta_ingresos" class="form-control value=" required min="0" />
                         </div>
-
-
                         <div class="header-inputs">
                             <label for="formPDF">PDF</label>
-                            <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
-                            <input id="formPDF" type="file" name="formPDF">
+                            <!-- <input type="hidden" name="MAX_FILE_SIZE" value="3000000" /> -->
+                            <input id="formPDF" type="file" name="formPDF"/>
                         </div>
-
-
                         <button type="submit" id="btnSubmit" class="btn btn-lg btn-primary btn-block" disabled>
                             Dar de alta
                         </button>
@@ -152,15 +147,15 @@
                     <div class="form-label-group">
                         <div class="header-inputs">
                             <p>N° de registro:</p>
-                            <input type="text" id="edit_registro" value="" readonly />
+                            <input type="text" id="edit_registro" name="edit_registro" value="" readonly />
                         </div>
                         <div class="header-inputs">
                             <p>Nombre del proyecto:</p>
-                            <input type="text" id="edit_proyecto" value="" required />
+                            <input type="text" id="edit_proyecto" name="edit_proyecto" value="" required />
                         </div>
                         <div class="header-inputs">
                             <p>Nombre del referente:</p>
-                            <input type="text" id="edit_referente" value="" required />
+                            <input type="text" id="edit_referente" name="edit_referente" value="" required />
                         </div>
 
                         <div class="header-inputs">
@@ -170,12 +165,12 @@
 
                         <div class="header-inputs">
                             <p>Fecha de alta:</p>
-                            <input type="date" id="edit_fecha" value="" required />
+                            <input type="date" id="edit_fecha" name="edit_fecha" value="" required />
                         </div>
 
                         <div class="header-inputs">
                             <p>Ingresos del proyecto:</p>
-                            <input type="number" id="edit_ingresos" class="form-control value=" required min="0" />
+                            <input type="number" id="edit_ingresos" name="edit_ingresos" class="form-control value=" required min="0" />
                         </div>
 
                         <div class="header-inputs">

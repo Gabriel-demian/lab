@@ -21,7 +21,8 @@ span.onclick = function () {
 }
 
 // boton Submit - Cargar nuevo articulo
-$('#btnSubmit').click(function () {
+$('#btnSubmit').click(function (event) {
+  event.preventDefault();
   if (validarAlta()) {  // se deja como segunda validación
     EnviarNuevoProy();
   }
@@ -54,7 +55,53 @@ function validarAlta() {
   }
 }
 
-function EnviarNuevoProy() {
+function EnviarNuevoProy(event) {
+  // return false
+  var confirmaAlta = confirm("Esta seguro que deseea añadir el neuvo proyecto ?");
+
+  if (confirmaAlta) {
+    const $proyecto = document.querySelector("#alta_proyecto"),
+      $referente = document.querySelector("#alta_referente"),
+      $pais = document.querySelector("#alta_pais"),
+      $inicio = document.querySelector("#alta_fecha"),
+      $ingresos = document.querySelector("#alta_ingresos");
+
+    var file = document.getElementById("formPDF");
+
+    const $inicio2 = $inicio.value.split("-").join("-");
+
+    var fo = new FormData($("#formAlta")[0]);
+
+    var request = $.ajax({
+      type: "POST",
+      url: "./alta.php",
+      processData: false,
+      contentType: false,
+      cache: false,
+      data: new FormData($("#formAlta")[0]),
+      success: function (respuestaDelServer) {
+        alert("EXITO");
+        console.log(respuestaDelServer);
+        alert(respuestaDelServer);
+        console.log("SE DIO DE ALTA UN NUEVO PROYECTO");
+        vaciarTabla();
+        traerJson();
+        window.location.reload();
+      },
+      error: function (respuestaDelServer, estado) {
+        alert("FAIL");
+        console.log("FALLÓ EL INTENTO DE INGESTION");
+        console.log(respuestaDelServer, estado);
+        // alert("ERROR");
+      }//cierra funcion asignada al success
+    });//cierra ajax
+  }
+
+}
+
+
+
+function EnviarNuevoProyV2() {
   // return false
   var confirmaAlta = confirm("Esta seguro que deseea añadir el neuvo proyecto ?");
 
