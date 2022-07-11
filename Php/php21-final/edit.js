@@ -10,7 +10,6 @@ var span = document.getElementsByClassName("closeEdit")[0];
 // When the user clicks the button, open the modal 
 function modalEditar() {
   modal2.style.display = "block";
-  console.log("cargando paises en modificación");
   obtenerPaisesModif(); // carga la lista de paises disponibles
 }
 
@@ -21,8 +20,6 @@ span.onclick = function () {
 
 // boton Submit - Cargar nuevo articulo
 $('#btnSubmitModif').click(function () {
-  
-  
   if (validarEdit()) {  // se deja como segunda validación
     EnviarProyModif();
   }

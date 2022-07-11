@@ -2,7 +2,6 @@
     include "db.php";
 
     $respuesta_estado = "resp";
-    $proyectos=[];
     
     /*Datos*/
     $registro = $_POST['registro'];
@@ -12,12 +11,12 @@
     $inicio = $_POST['inicio'];
     $ingresos = $_POST['ingresos'];
     
-    $sql = "INSERT INTO `proyectos` ('registro', 'proyecto', 'referente', 'pais', 'inicio', 'ingresos') VALUES ('$proyecto','$referente','$pais','$inicio',$ingresos);";
+    $sql = "INSERT INTO `proyectos` ('proyecto', 'referente', 'pais', 'inicio', 'ingresos') VALUES ('$proyecto','$referente','$pais','$inicio',$ingresos) WHERE 'registro' = '$registro';";
     $result = $conn->query($sql);
 
     if ($result === TRUE) 
     {
-        $respuesta_estado = "Artículo modificado exitosamente!</br>Sin modificar el archivo PDF";
+        $respuesta_estado = "Artículo modificado exitosamente!";
         $objArticulos->success = TRUE;
     } 
     else 
@@ -28,6 +27,9 @@
         die('Query FAILED' . mysqli_error());
     }
 
+    mysqli_close($conn);
+
+    $objArticulos->respuesta_estado = $respuesta_estado;
     echo json_encode($objArticulos);
 
 ?>
