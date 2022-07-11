@@ -84,7 +84,7 @@ function armarTabla(json) {
         tdModi.setAttribute("id", "modi-proy");
         //tdModi.setAttribute("class", "img-responsive");
         tdModi.innerHTML = "\
-            <img src='../recursos/pdf.png' class='btCeldaPDF' ></img>\
+            <img src='../recursos/pdf.png' class='btCeldaPDF' id="+elemento.registro+"></img>\
             <img src='../recursos/edit.png' class='btCeldaModi' id="+elemento.registro+"></img>\
             <img src='../recursos/delete.png' class='btCeldaDelete' id="+elemento.registro+"></img>";
         tr.appendChild(tdModi);
@@ -104,6 +104,8 @@ if (window.addEventListener) {
             modalEditar();
         }
         if (elemento.target.getAttribute("class").indexOf("btCeldaPDF") === 0) {
+            console.log(elemento.target.id);
+            CargarPDF(elemento.target.id);
             MostrarVentanaModalPDF();
         }
         if (elemento.target.getAttribute("class").indexOf("btCeldaDelete") === 0) {
@@ -125,6 +127,22 @@ function cerrarVentanaModalPDF(){
     $('#modalWindowPDF').attr("class","modalWindowPDFDisabled");
     document.getElementById("ContainerPDF").removeChild(document.getElementById("ContainerPDF").firstChild); 
 }
+
+function CargarPDF(reg){
+    var request = $.ajax({
+        type: "GET",
+        url: "./getPdf.php",
+        data: {registro: reg},
+        success: function(respuestaDelServer,estado) {
+            var objetoDato = JSON.parse(respuestaDelServer);
+            console.log("---------------------------------------------------------------------------------------------");
+            console.log(objetoDato.documentoPDF);
+            console.log("---------------------------------------------------------------------------------------------");
+           $("#ContainerPDF").html("<embed src='data:application/pdf;base64,"+ objetoDato.documentoPDF +"' style='height:50%;width:100%; position:relative;' ></embed>.");
+        }
+    });
+}
+
 
 document.getElementById("cargar").addEventListener("click", ()=> traerJson());
 document.getElementById("limpiar").addEventListener("click", ()=> vaciarTabla());

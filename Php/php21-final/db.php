@@ -12,7 +12,7 @@
     $objArticulos->success = FALSE;
 
     if($connection){
-        echo ("exito");
+        //echo ("exito");
         $objArticulos->success = TRUE;
     }else{
         echo ("mal");
