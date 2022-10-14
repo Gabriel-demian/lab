@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: beige;
+}
+
+.header,
+.footer {
+  height: 10%;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+  align-items: center;
+  background-color: grey;
+  text-align: center;
+}
+
+
+.header-inputs {
+  display: flex;
+  align-items: center;
+}
+
+.header-inputs p {
+  margin: 0 0.5rem;
+  font-weight: bold;
+  color: beige;
+}
+
+.header-inputs button,
+input {
+  width: 100px;
+  height: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.header-inputs button {
+  margin: 0 1rem;
+  font-weight: bold;
+  background-color: blue;
+  border-radius: 10px;
+  color: whitesmoke;
+  border: none;
+  transition: all 0.3s;
+}
+
+.header-inputs input {
+  padding-left: 1rem;
+  color: beige;
+  background-color: #19181625;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+thead {
+  table-layout: fixed;
+}
+
+.main {
+  color: black;
+  height: 80%;
+  width: 100%;
+  padding: 1rem 0;
+  overflow: auto;
+}
+
+.main-table {
+  width: 100vw;
+  max-width: 100%;
+  height: 100%;
+}
+.main-table,
+th,
+tr,
+td {
+  border: solid 2px grey;
+  border-collapse: collapse;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 100vw;
+}
+
+.main-table th {
+  cursor: pointer;
+}
+
+.filter input {
+  width: 100%;
+  height: 3rem;
+  background-color: #9d762240;
+  border: none;
+  padding: 1rem;
+  color: black;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.filter td {
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .header,
+  .footer {
+    padding: 1rem;
+    flex-wrap: wrap-reverse;
+    height: 6rem;
+  }
+
+  .header-inputs {
+    margin: 1rem 0;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-inputs input,
+  .header-inputs button {
+    margin: 5px;
+  }
+
+  .main-table,
+  th,
+  tr,
+  td {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+/* Modal */
+
+.modalEdit,
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: gray;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .header-inputs button{
+      position: fixed;
+      top: 0%;
+      right: 0%;
+      width: 400px;
+      height: 10%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+  }
+}
+
+/* The Close Button */
+.close, .closeEdit {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus,
+.closeEdit:hover,
+.closeEdit:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* botones TABLA edición de fila*/
+.btCeldaPDF {
+  height: 30px;
+  padding: 2px;
+  filter: grayscale(1);
+}
+.btCeldaModi {
+  padding-top: 3px;
+  height: 35px;
+  width: 35px;
+  filter: grayscale(1);
+}
+
+.btCeldaDelete {
+  height: 30px;
+  padding: 2px;
+  filter: grayscale(1);
+}
+.btCeldaDelete:hover,
+.btCeldaModi:hover,
+.btCeldaPDF:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+/* Modal PDF */
+
+.modalWindowPDFEnabled {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s linear;
+}
+
+.modalWindowPDFDisabled {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+#ContainerPDF{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: lightgray;
+}
+
+#modalWindowPDF{
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  width: 30%;
+  height: 80%;
+}
+
+#mwBodyPDF {
+  height: 92%;
+}
+
+#mwHeaderPDF{
+  height: 10%;
+  color: whitesmoke;
+  background-color: rgb(82, 82, 82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mwBodyPDF h2,
+#mwBodyPDF h3 {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btnCloseWindow {
+  background-color: green;
+  border: solid 4px #CC2E32;
+  width: 20px;
+  height: 20px;
+  color: red;
+  font-weight: 600;
+  border: none;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnCloseWindow:hover {
+  cursor: pointer;
+  background-color: #FC4646;
+}
+
+.modalWindowHeader {
+  width: 100%;
+  height: 8%;
+  background-color: #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: whitesmoke;
+}

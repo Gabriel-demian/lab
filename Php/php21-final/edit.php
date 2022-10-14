@@ -21,28 +21,46 @@
     $respuesta_estado = "resp";
     
     /*Datos*/
-    $registro = $_POST['registro'];
-    $proyecto = $_POST['proyecto'];
-    $referente = $_POST['referente'];
-    $pais = $_POST['pais'];
-    $inicio = $_POST['inicio'];
-    $ingresos = $_POST['ingresos'];
-  
-    $sql = "UPDATE `proyectos` SET `proyecto`= '$proyecto',`referente`='$referente',`pais`= '$pais',`inicio`='$inicio',`ingresos`= $ingresos WHERE registro = $registro;";
-    $result = $connection->query($sql);
+    $registro = $_POST['edit_registro'];
+    $proyecto = $_POST['edit_proyecto'];
+    $referente = $_POST['edit_referente'];
+    $pais = $_POST['edit_pais'];
+    $inicio = $_POST['edit_fecha'];
+    $ingresos = $_POST['edit_ingresos'];
 
-    if ($result === TRUE) 
-    {
-        $respuesta_estado = "Artículo modificado exitosamente!";
-        $objArticulos->success = TRUE;
-    } 
-    else 
-    {
-        $respuesta_estado = "Error al modificar el artículo: " . $objArticulos->codArticulo = $_POST['codArticulo'];
+    $documento = $_FILES['formPDF']['tmp_name'];
+
+    if(empty($documento)) {
+        $sql = "UPDATE `proyectos` SET `proyecto`= '$proyecto',`referente`='$referente',`pais`= '$pais',`inicio`='$inicio',`ingresos`= $ingresos WHERE registro = $registro;";
+        $result = $connection->query($sql);
+    
+        if ($result === TRUE) 
+        {
+            $respuesta_estado = "Registro modificado exitosamente!";
+            $objArticulos->success = TRUE;
+        } 
+        else 
+        {
+            $respuesta_estado = "Error al modificar el proyecto: " . $proyecto;
+        }
+
+    }else{
+        $documentoPdf = base64_encode(file_get_contents($documento));
+        $sql = "UPDATE `proyectos` SET `proyecto`= '$proyecto',`referente`='$referente',`pais`= '$pais',`inicio`='$inicio',`ingresos`= $ingresos,`pdf`= $documentoPdf WHERE registro = $registro;";
+        $result = $connection->query($sql);
+
+        if ($result === TRUE) 
+        {
+            $respuesta_estado = "Proyecto " . $proyecto . "modificado exitosamente!</br>Con archivo PDF!";
+            $objArticulos->success = TRUE;
+        } 
+        else 
+        {
+            $respuesta_estado = "Error al modificar el proyecto: " . $proyecto;
+        }
     }
-    if(!$result){
-        die('Query FAILED' . mysqli_error());
-    }
+  
+    
 
     mysqli_close($connection);
 

@@ -60,6 +60,17 @@ function EnviarNuevoProy(event) {
   var confirmaAlta = confirm("Esta seguro que deseea añadir el neuvo proyecto ?");
 
   if (confirmaAlta) {
+    const $proyecto = document.querySelector("#alta_proyecto"),
+      $referente = document.querySelector("#alta_referente"),
+      $pais = document.querySelector("#alta_pais"),
+      $inicio = document.querySelector("#alta_fecha"),
+      $ingresos = document.querySelector("#alta_ingresos");
+
+    var file = document.getElementById("formPDF");
+
+    const $inicio2 = $inicio.value.split("-").join("-");
+
+    var fo = new FormData($("#formAlta")[0]);
 
     var request = $.ajax({
       type: "POST",
@@ -74,8 +85,8 @@ function EnviarNuevoProy(event) {
         alert(respuestaDelServer);
         console.log("SE DIO DE ALTA UN NUEVO PROYECTO");
         vaciarTabla();
-        window.location.reload();
         traerJson();
+        window.location.reload();
       },
       error: function (respuestaDelServer, estado) {
         alert("FAIL");
